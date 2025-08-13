@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images:{
-        domains:['img.freepik.com']
-    }
+  reactStrictMode: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.freepik.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      }
+    ],
+  },
 };
 
 export default nextConfig;

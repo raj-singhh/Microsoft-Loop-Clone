@@ -1,12 +1,32 @@
 'use client'
 import Logo from '@/app/_components/Logo'
-import { useAuth } from '@clerk/clerk-react'
+import { db } from '@/config/firebaseConfig'
+import { useAuth, useUser } from '@clerk/clerk-react'
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs'
-import React from 'react'
+import { doc, setDoc } from 'firebase/firestore'
+import React, { useEffect } from 'react'
 
 function Header() {
     const {orgId}= useAuth();
-    console.log(orgId)
+    const {user} = useUser();
+
+    useEffect(()=>{
+      user && SaveUserData()
+    },[user])
+    
+    // Used to save user data 
+    const SaveUserData=async()=>{
+      const docId=user?.primaryEmailAddress?.emailAddress
+      try{
+        await setDoc(doc(db,'LoopUsers',docId),{
+          name:user?.fullName,
+          avatar:user?.imageUrl,
+          email:user?.primaryEmailAddress?.emailAddress
+        })
+      }catch(e){
+          console.log(e)
+      }
+    }
   return (
     <div className='flex justify-between items-center p-3 shadow-sm'>
         <Logo/>

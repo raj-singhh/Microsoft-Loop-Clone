@@ -1,3 +1,5 @@
+import { createRoomContext, createLiveblocksContext } from "@liveblocks/react";
+import { LiveList, createClient } from "@liveblocks/client";
 // Define Liveblocks types for your application
 // https://liveblocks.io/docs/api-reference/liveblocks-react#Typing-your-data
 declare global {
@@ -5,22 +7,25 @@ declare global {
     // Each user's Presence, for useMyPresence, useOthers, etc.
     Presence: {
       // Example, real-time cursor coordinates
-      // cursor: { x: number; y: number };
+      cursor: { x: number; y: number };
+      cursorColor: string;
+      editingText: any
     };
 
     // The Storage tree for the room, for useMutation, useStorage, etc.
     Storage: {
       // Example, a conflict-free list
-      // animals: LiveList<string>;
+      document: LiveList<any>;
     };
 
     // Custom user info set when authenticating with a secret key
     UserMeta: {
       id: string;
       info: {
-        // Example properties, for useSelf, useUser, useOthers, etc.
-        // name: string;
-        // avatar: string;
+        name: string;
+        picture: string;
+        color:any
+        
       };
     };
 
@@ -46,4 +51,11 @@ declare global {
   }
 }
 
-export {};
+
+const client = createClient({
+  authEndpoint: "/api/liveblocks-auth",
+});
+
+const liveblocksContext = createLiveblocksContext(client);
+
+export const { RoomProvider, useMyPresence, useUpdateMyPresence, useRoom, useOthers } = createRoomContext<any>(liveblocksContext as any);

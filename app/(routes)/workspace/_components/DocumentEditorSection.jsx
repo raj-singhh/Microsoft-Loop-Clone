@@ -23,17 +23,16 @@ function DocumentEditorSection({params}) {
 
         {/* Rich Text Editor */}
 
-        <div className='grid grid-cols-4'>
-          <div className='col-span-3'>
+        
 
             <RichDocumentEditor params={params}/>
-          </div>
+          
 
-          <div className='fixed right-5 bottom-5 '>
+          <div className='fixed right-10 bottom-10 '>
             <Button onClick={()=>setOpenComment(!openComment)}>{openComment?<X/>:<MessageCircle/>}</Button>
             {openComment && <CommentBox/>}
           </div>
-        </div>
+        
     </div>
   )
 }

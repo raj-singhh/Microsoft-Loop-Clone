@@ -34,7 +34,7 @@ function DocumentInfo({params}) {
         await updateDoc(docRef,{
             [key]:value
         })
-        toast('Documt Updated!')
+        toast('Document Updated!')
     }
   return (
     <div>
@@ -56,7 +56,7 @@ function DocumentInfo({params}) {
             </div>
         </CoverPicker>
         {/* Emoji Picker */}
-        <div className='absolute ml-10 mt-[-40px] cursor-pointer'>
+        <div className='absolute ml-10 px-20 mt-[-40px] cursor-pointer'>
 
             <EmojiPickerComponent setEmojiIcon={(emoji)=>{setEmoji(emoji)
                 UpdateDocumentInfo('emoji',emoji)}
@@ -68,7 +68,7 @@ function DocumentInfo({params}) {
 
         </div>
         {/* File Name  */}
-        <div className='mt-10 p-10'>
+        <div className='mt-10 px-20 ml-10 p-10'>
             <input type="text" 
             placeholder='Untitled Document' 
             defaultValue={documentInfo?.documentName}

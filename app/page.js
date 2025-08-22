@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
+import Hero from './_components/Hero'
+import Header from './_components/Header'
 
 const page = () => {
   return (
     <div>
-      <h1 className='bg-red-500'> Raj Singh guruji</h1>
-      <Button variant="outline" size="sm">Hello</Button>
+      <Header/>
+      <Hero/>
     </div>
   )
 }

@@ -30,8 +30,20 @@ A collaborative workspace app inspired by **Microsoft Loop**, built with **Next.
 ---
 
 ## 📸 Screenshots
+## Home Page
+<img width="1902" height="962" alt="image" src="https://github.com/user-attachments/assets/d1d85119-c7f4-440c-82eb-80f6b48dcc94" />
 
-*(Add screenshots of your project here – workspace dashboard, editor page, collaboration in action)*
+## Dashbpard
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/34c910a6-678a-4b83-bd95-1a25d9960dd7" />
+
+
+## Workspace
+<img width="1911" height="946" alt="image" src="https://github.com/user-attachments/assets/cb93e200-2b24-49d6-8454-ee11f83569a6" />
+
+<img width="1907" height="892" alt="image" src="https://github.com/user-attachments/assets/2c8a0f77-4ab8-4981-8765-64a491a63d24" />
+
+
+
 
 ---
 

@@ -33,7 +33,7 @@ A collaborative workspace app inspired by **Microsoft Loop**, built with **Next.
 ## Home Page
 <img width="1902" height="962" alt="image" src="https://github.com/user-attachments/assets/d1d85119-c7f4-440c-82eb-80f6b48dcc94" />
 
-## Dashbpard
+## Dashboard
 <img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/34c910a6-678a-4b83-bd95-1a25d9960dd7" />
 
 
